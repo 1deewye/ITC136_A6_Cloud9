@@ -11,12 +11,36 @@
 	<h3>Introduction and Elements of the stack</h3>
 	<p><!-- List the different elements that are going to be discussed: Node.JS/Express/Ajax --></p>
 	<h3>Node.JS</h3>
-	<p><!--Insert David's submission here--></p>
-	<h3>Express</h3>
-	<p><!--Insert Joplin's submission here--></p>
+	<p>Node.js was created by Ryan Dahl in 2009. Dahl's goal was to make JavaScript, primarily a client-side language, run in back-end development. By 2010 Node had already become popular enough that the Node Package Manager, or NPM, was created in order to help people run, and pass on, Node based tools and libraries. Over the years, as programmers worldwide try to simplify their own lives, Node has become a major building block in the “JavaScript Everywhere,” movement. This idea states that all web app development should revolve around the same coding language, rather than running many different things server side. </p>
+	<h3>Express.JS</h3>
+	<p>Express is a backend part of many stack. Express can be described as middleware or what is between the server and the client. Express creates an exceptionally fast connection between the client and the server when paired with Node.js. Express is easy to test as well, because it is between the two. Express has a wide range of functions. It has successfully used the NPM making it so people can customize express based on what third party plugins they choose.  Express has a lot of community support for it because it handles things like cookies, routes, and requesting body and forming the response, it is usually better for small to medium projects. Overall, express is a minimal bundle of features and functions that make it easier to build web apps.</p>
 	<h3>AJAX, Routing and CRUD</h3>
 	<p><!--Insert Payal's submission here--></p>
-	<h3>Code Snippets</h3>
-	<code><!--Insert code snippets here--></code>
+	<h3>How To</h3>
+	<p>As with most things, the best way to really get a good grasp on something is to playt around with it. In the following demo I'm going to show you how to make a super simple, super basic "Hello World" app in Cloud 9, from AWS</p>
+	<p>Your standard "Hello World" project is simply a way to design, from the ground up, the most simple and fundamental version of a project, and have it display the terms "Hello World" where it is supposed to. Basically it creates the barebones, then runs it to make sure it works. Once you have the barebones you can play around with it some more in order to make it fancier.</p>
+	<ol>
+		<li><h3>Spin up the most simple workspace in Cloud 9</h3><p>The first thing we're going to do is spin up a basic workspace. For this tutorial we're actually going to avoid the Node.JS workspace that Cloud 9 provides due to the fact that it contains a bunch of stuff that we're not currently interested in. For now, just go ahead and spin up one of the Ubuntu workspaces. This will create a basic command line for you to work with.</p></li>
+		<li><h3>Install your dependencies</h3><p>Once you have your command line ready to go, we're going to install the pieces of the puzzle for us to work with. Cloud 9 is already built using Node.JS, so that bit is taken care of. We do want ot install Express.JS, which is the middleware that our front end will be using.</p>
+			<ul>
+				<li><p>Use the npm init command to install a package.json file in your program.</p><code>npm init</code><p>You can accept all the defaults, but change the name of your "entry point" from the default to "app.js"</p></li>
+				<li><p>Now install and save Express into the myApp directory.</p><code>npm install Express --save</code><p>This will install Express and save it into your dependencies</p></li>
+			</ul></li>
+		<li><h3>Set up the requirements in your main file</h3><p>In the app.js file, use the save the following commands to the top of the file.</p>
+			<code>var express = require('express');</code></br>
+			<code>var app = express();</code></li>
+		<li><h3>Set up your listening port</h3><p>Now you'll want to tell the program where the output of the file is going to be shown. Cloud 9 has special variables for this to ensure that it stays inside the develpment environment.</p>
+		</br>
+		<code>app.listen(process.env.PORT, process.env.IP, function() {</br>
+			console.log('This app is listening on port 3000')</br>
+		});</code></li>
+		<li><h3>Set up the functionality</h3><p>Alright! So now we've got the program importing all the things we need for it to run, and we've got a designated space where the output is going to be shown. Now we need to create the program itself.</p>
+			<code>app.get('/', function(req, res){ </br>
+				]res.send('Hello World')</br>
+			});</code>
+			<p>What we've done here, step-by-step, is to tell the app to use the express middleware (<code>app.get()</code>) to send a get request<code>'/', function(req, res)</code> to the root level of our dummy web page. Once we have the connection, the webpage will send a response<code>res.send("Hello World")</code> of the term "Hello World" that will render on the browser window.</p></li>
+		<li><h3>Run the Code</h3><p>In the terminal for the app.js file you'll see a button to run the program. Click the button and then click the link for the web page that is provided to you. You should see the results of your work there.</p></li>
+		<li><h3>Mess around with what you've built</h3><p>Now that you have the functionality built, you can play with it. Try changing the output of the respoese (<code>res.send("")</code>), or change where the output is going to be displayed (change the location from <code>'/'</code> to <code>'wherever'</code>). You should be able to check the page by typing your new destination on the end of the browser path provided to you.</p></li>	
+	</ol>
 </body>
 </html>
