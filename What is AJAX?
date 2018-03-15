@@ -1,0 +1,5 @@
+AJAX is a set of Web development techniques using many Web technologies on the client side to create asynchronous Web 
+applications. AJAX stands for Asynchronous JavaScript And XML. AJAX is not a programming language. It uses a combination 
+of a browser built-in XMLHttpRequest object and JavaScript and HTML DOM. AJAX allows web pages to be updated asynchronously
+by exchanging data with a web server behind the scenes. This means it's possible to update parts of a web page, without 
+reloading the whole page. 
